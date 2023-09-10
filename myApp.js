@@ -3,7 +3,8 @@ const helmet = require('helmet');
 const app = express();
 const hidePoweredBy = helmet.hidePoweredBy(); 
 const frameGuard = helmet.frameGuard({action: 'deny'})
-app.use(hidePoweredBy, frameGuard);
+app.use(hidePoweredBy);
+app.use(frameGuard)
 
 
 
