@@ -1,8 +1,9 @@
 const express = require('express');
 const helmet = require('helmet');
 const app = express();
-
-app.use(helmet.hidePoweredBy());
+const hidePoweredBy = helmet.hidePoweredBy(); 
+const frameGuard = helmet.frameGuard({action: 'deny'})
+app.use(hidePoweredBy, frameGuard);
 
 
 
