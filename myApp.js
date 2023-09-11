@@ -11,8 +11,8 @@ app.use(helmet.frameguard({action: 'deny'}));
 app.use(helmet.xssFilter());
 app.use(helmet.noSniff());
 app.use(helmet.ieNoOpen());
-app.use(helmet.dnsPrefetchController());
-
+//app.use(helmet.dnsPrefetchController());
+app.use(helmet.noCache());
 
 
 console.log('somethin');
