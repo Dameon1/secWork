@@ -5,7 +5,7 @@ const timeInSeconds =90*24*60*60;
 
 
 
-helmet.hsts({maxAge: timeInSeconds, force: true});
+app.use(helmet.hsts({maxAge: timeInSeconds, force: true}));
 app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({action: 'deny'}));
 app.use(helmet.xssFilter());
