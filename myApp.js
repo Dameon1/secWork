@@ -4,8 +4,7 @@ const app = express();
 const timeInSeconds =90*24*60*60; 
 
 
-//helmet.dnsPrefetchController()
-app.use(helmet.dnsPrefetchController());
+
 app.use(helmet.hsts({maxAge: timeInSeconds, force: true}));
 app.use(helmet.hidePoweredBy());
 app.use(helmet.frameguard({action: 'deny'}));
@@ -15,7 +14,48 @@ app.use(helmet.ieNoOpen());
 
 
 
+
 console.log('somethin');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
